@@ -1,7 +1,7 @@
-const express = require('express');
-const path = require('path');
+import express  from 'express';
+import path from 'path';
 
-const startServer = (Options)=>{
+export const startServer = (Options)=>{
     const {port, public_path = 'public'} = Options;
     const app = express();
     //Para poder usar middlewares se usa la palabra "use" (express)
@@ -16,6 +16,3 @@ const startServer = (Options)=>{
     });
 }
 
-module.exports = {
-    startServer
-}
